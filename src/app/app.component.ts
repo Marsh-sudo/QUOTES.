@@ -9,7 +9,7 @@ import { Quotes } from './quotes';
 export class AppComponent {
   title = 'QUOTES.';
 
-    wises:Quotes[] = [
+    wise:Quotes[] = [
       {name:'Success usually comes to those who are busy looking for it'},
       {name:'I never dreamed about success.I worked for it....Estee Lauder'},
       {name:'Do not let yesterday take up too much of today...Will Rodgers'},
@@ -20,4 +20,11 @@ export class AppComponent {
 
     ]
 
+    addNewGoal(quote){
+      let quoteLength = this.wise.length;
+      quote.id = quoteLength+1;
+      this.wise.push(quote)
+    }
+
 }
+
