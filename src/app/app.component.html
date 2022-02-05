@@ -17,6 +17,11 @@
    <div class="row">
      <div class="col-sm 6">
        <h6>Some motivational quotes:</h6>
+       <ul>
+         <li *ngFor="let quote of wise">
+           {{quote.name}}
+         </li>
+       </ul>
       
      </div>
      <div class="col-sm-6">
