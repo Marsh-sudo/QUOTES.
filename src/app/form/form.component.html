@@ -1,1 +1,25 @@
-<p>form works!</p>
+<div class="container-fluid">
+    <h2 class="text-center">Create a new Quote.</h2>
+    <hr>
+    <form (ngSubmit)="submitQuotes()" #goalForm="ngForm">
+        <div class="form-group">
+  
+            <label for="name">Quote:</label>
+            <input type="text" required class="form-control" id="name" [(ngModel)]="newQuotes.name" name="name">
+             
+            <!--Testing to see if display-->
+            Dispay:{{newQuotes}}
+  
+        </div>
+        <div class="form-group">
+  
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" rows="4" required></textarea>
+  
+        </div>
+
+        <button type="submit" class="btn btn-success">Add Quote</button>
+    </form>
+  </div>
+  
+  
