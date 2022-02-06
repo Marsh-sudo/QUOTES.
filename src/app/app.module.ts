@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FormComponent } from './form/form.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { QuoteComponent } from './quote/quote.component';
+import { UpvotesDirective } from './upvotes.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { QuoteComponent } from './quote/quote.component';
     FooterComponent,
     FormComponent,
     QuoteDetailComponent,
-    QuoteComponent
+    QuoteComponent,
+    UpvotesDirective
   ],
   imports: [
     BrowserModule,

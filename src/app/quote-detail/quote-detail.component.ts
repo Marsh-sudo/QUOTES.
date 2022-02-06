@@ -9,10 +9,10 @@ import { Quotes } from '../quotes';
 export class QuoteDetailComponent implements OnInit {
 
   @Input() x:Quotes
-  @Output() isDelete = new EventEmitter<boolean>();
+  @Output() Delete = new EventEmitter<boolean>();
 
   goalDelete(complete:boolean){
-    this.isDelete.emit(complete);
+    this.Delete.emit(complete);
   }
 
 

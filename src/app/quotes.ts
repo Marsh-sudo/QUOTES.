@@ -1,6 +1,6 @@
 export class Quotes {
     showDescription:boolean;
-    constructor(public name:string, public description:string) {
+    constructor(public id:number,public name:string, public description:string) {
         this.showDescription=false;
     }
 }

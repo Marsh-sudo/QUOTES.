@@ -18,10 +18,10 @@
      <div class="col-sm 6">
        <h6>Some motivational quotes:</h6>
        <ul>
-           <div *ngFor="let x of wise" let i = index>
+           <div *ngFor="let x of wise"; let i = index>
                <li>{{x.name}}</li>
                <button (click) = 'toggleDetails(i)'>Show Details</button>
-               <app-quote-detail *ngIf="x.showDescription" [x]="x"></app-quote-detail>
+               <app-quote-detail *ngIf="x.showDescription" [x]="x" (Delete) = 'deleteQuote($event,i)'></app-quote-detail>
            </div>
        </ul>
       
