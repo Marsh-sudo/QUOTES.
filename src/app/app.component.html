@@ -1,32 +1,5 @@
 
 <app-header></app-header>
 
-<div class="container">
-  <div class="section">
-    <h1>WELCOME TO MOTIVATIONAL QUOTES APP.</h1><br>
-    <p>
-      <strong>EVERYONE IN LIFE NEEDS SOME MOTIVATIONAL INSPIRATION IN SOME WAY OR ANOTHER.SO WE HAVE COME 
-        COME UP WITH AN APP WHERE PEOPLE CAN PICK UP SOME QUOTES AND EVEN CREATE THIER OWN QUOTES.
-      </strong>
-    </p>
-    
-  </div>
-</div>
+<app-quote></app-quote>
 
- <div class="container">
-   <div class="row">
-     <div class="col-sm 6">
-       <h6>Some motivational quotes:</h6>
-       <ul>
-         <li *ngFor="let quote of wise">
-           {{quote.name}}
-         </li>
-       </ul>
-      
-     </div>
-     <div class="col-sm-6">
-       <app-form (addQuotes)="addnewQuotes ($event)"></app-form>
-     </div>
-
-   </div>
- </div>
