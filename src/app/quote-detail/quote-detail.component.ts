@@ -8,7 +8,7 @@ import { Quotes } from '../quotes';
 })
 export class QuoteDetailComponent implements OnInit {
 
-  @Input() x:Quotes
+  @Input() x:Quotes;
   @Output() Delete = new EventEmitter<boolean>();
 
   quoteDelete(complete:boolean){
