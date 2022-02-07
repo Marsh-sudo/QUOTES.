@@ -1,4 +1,18 @@
 <p>
     {{x.description}}
 </p>
-<button onclick="quoteDelete(true)">Delete Quote</button>
+
+
+<div class="container" id="buttons">
+    <span class="btn btn-sm btn-success" (click)="upvote()">{{x.like}} <i class="fa fa-thumbs-up" id="like"></i></span>
+    <span class="btn btn-sm " id="dislike" (click)="downvote()" >{{x.dislike}} <i class="fa fa-thumbs-down" id="dislike"></i></span>
+    <span class="btn btn-sm btn-danger" id="del" (click)='quoteDelete(true)'><i class="fa fa-trash" id="delete"></i></span>
+  </div>
+
+
+
+
+
+
+
+

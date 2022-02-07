@@ -1,11 +1,11 @@
 <div class="container-fluid">
     <h2 class="text-center">Create a new Quote.</h2>
     <hr>
-    <form (ngSubmit)="submitQuotes()" #goalForm="ngForm">
+    <form (ngSubmit)="submitQuotes()" #quoteForm="ngForm">
         <div class="form-group">
   
             <label for="name">Quote:</label>
-            <input type="text" required class="form-control" id="name" [(ngModel)]="newQuotes.name" name="name">
+            <textarea type="text" required class="form-control" id="name" [(ngModel)]="newQuotes.name" name="name" #name="ngModel"></textarea>
              
             <!--Testing to see if display-->
             Dispay:{{newQuotes.name}}
@@ -13,10 +13,10 @@
         </div>
         <div class="form-group">
   
-            <label for="description">Author Name:</label>
-            <input type="text" required class="form-control" id="name" [(ngModel)]="Author.name" name="name">
+            <label for="author">Author Name:</label>
+            <input  type="text" required class="form-control" id="author" [(ngModel)]="newQuotes.author" name="author" #author="ngModel">
 
-            Author:{{Author.name}}
+            Author:{{newQuotes.author}}
   
         </div>
 

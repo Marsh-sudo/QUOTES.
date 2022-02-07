@@ -15,19 +15,19 @@
 
  <div class="container">
    <div class="row">
-     <div class="col-sm 6">
+     <div class="col-sm-4">
        <h6>Some motivational quotes:</h6>
        <ul>
-           <div *ngFor="let x of wise"; let i = index>
-               <li>{{x.name}}</li>
+           <div *ngFor="let x of wise; let i = index">
+               <li>{{x.name}} posted on{{x.postDate|date}}</li>
                <button (click) = 'toggleDetails(i)'>Show Details</button>
-               <app-quote-detail *ngIf="x.showDescription" [x]="x" (Delete) = 'deleteQuote($event,i)'></app-quote-detail>
+               <app-quote-detail  [x]="x" (Delete) = 'quoteDelete($event,i)'></app-quote-detail>
            </div>
        </ul>
       
      </div>
-     <div class="col-sm-6">
-       <app-form (addQuotes)="addnewQuotes ($event)"></app-form>
+     <div class="col-sm-4">
+       <app-form (addQuotes)="addNewQuote($event)"></app-form>
      </div>
 
    </div>

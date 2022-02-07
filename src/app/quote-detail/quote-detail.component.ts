@@ -11,8 +11,16 @@ export class QuoteDetailComponent implements OnInit {
   @Input() x:Quotes
   @Output() Delete = new EventEmitter<boolean>();
 
-  goalDelete(complete:boolean){
+  quoteDelete(complete:boolean){
     this.Delete.emit(complete);
+  }
+
+  upvote(){
+    this.x.like +=1;
+  }
+
+  downvote(){
+    this.x.dislike +=1;
   }
 
 

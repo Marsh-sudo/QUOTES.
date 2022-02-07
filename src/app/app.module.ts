@@ -10,6 +10,7 @@ import { FormComponent } from './form/form.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { QuoteComponent } from './quote/quote.component';
 import { UpvotesDirective } from './upvotes.directive';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { UpvotesDirective } from './upvotes.directive';
     FormComponent,
     QuoteDetailComponent,
     QuoteComponent,
-    UpvotesDirective
+    UpvotesDirective,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
