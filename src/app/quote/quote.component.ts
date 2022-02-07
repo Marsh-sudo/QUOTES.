@@ -34,10 +34,10 @@ export class QuoteComponent implements OnInit {
       this.wise[index].showDescription = !this.wise[index].showDescription;
     }
 
-  addNewQuote(x: any){
+  addNewQuote(quote:any){
     let quoteLength = this.wise.length;
-    x.id = quoteLength+1;
-    this.wise.push(x)
+    quote.id = quoteLength+1;
+    this.wise.push(quote)
   }
 
    

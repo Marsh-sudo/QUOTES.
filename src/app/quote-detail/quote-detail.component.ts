@@ -8,7 +8,7 @@ import { Quotes } from '../quotes';
 })
 export class QuoteDetailComponent implements OnInit {
 
-  @Input() x:Quotes;
+  @Input() quote: Quotes;
   @Output() Delete = new EventEmitter<boolean>();
 
   quoteDelete(complete:boolean){
@@ -16,15 +16,17 @@ export class QuoteDetailComponent implements OnInit {
   }
 
   upvote(){
-    this.x.like +=1;
+    this.quote.like +=1;
   }
 
   downvote(){
-    this.x.dislike +=1;
+    this.quote.dislike +=1;
   }
 
 
-  constructor() { }
+  constructor(private quotes:Quotes) {
+    this.quote = quotes
+   }
 
   ngOnInit(): void {
   }
