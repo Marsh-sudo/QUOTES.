@@ -15,31 +15,41 @@
 
  <div class="container">
    <div class="row">
-     <div class="col-sm-12">
+     <div class="col-md-6">
        <h6>Some motivational quotes:</h6>
-       <ul>
-           <div *ngFor="let quote of wise; let i = index">
-               <li>{{quote.name}} posted on{{quote.postDate|date}}</li>
+       ijsiucnuf
+       
+       
+       <div *ngFor='let quote of wise;let i = index'>
+            
+            <div>
+              
+                <p>{{quote.quotename}}</p>
+
+            </div>
+
+              <p>Posted on:{{quote.postDate|date}}</p>
                <button (click) = 'toggleDetails(i)'>Show Details</button>
+               <!-- <app-form (addQuote)="addNewQuote($event)"></app-form> -->
                <app-quote-detail  [quote]="quote" (Delete) = 'quoteDelete($event,i)'></app-quote-detail>
            </div>
-       </ul>
       
+      
+     </div>
+     <div class="col-md-6">
+      <app-form (addQuote)="addNewQuote($event)"></app-form>
      </div>
     </div>
   </div>
 
    <div class="container">
      <div class="row">
-       <div class="col-sm-12">
-        <app-form (addQuotes)="addNewQuote($event)"></app-form>
-       </div>
+       <!-- <div class="col-sm-12">
+        <app-form (addQuote)="addNewQuote($event)"></app-form>
+       </div> -->
      </div>
    </div>
-     <div class="col-sm-12">
-       <app-form (addQuotes)="addNewQuote($event)"></app-form>
-     </div>
-
+     
    
  
 
