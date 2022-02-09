@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Quotes } from '../quotes';
+import { HttpClient } from '@angular/common/http';
+import { Quote } from '../quote-class/quote';
 
 @Component({
   selector: 'app-quote',
@@ -7,6 +9,8 @@ import { Quotes } from '../quotes';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
+
+  quote!: Quote;
 
   quotes:Quotes[]=[
      new Quotes(1,'Success usually Comes to those who are busy looking for it','Mahtamah melly',new Date(2021,3,15),0,0),
@@ -33,9 +37,17 @@ export class QuoteComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
+    interface ApiResponse{
+      author:string
+      quote:string
+    }
+    this.http.get<ApiResponse>("http://quotes.stormconsultancy.co.uk/random.json").subscribe(data=>{
+      //successful apiResponse
+      this.quote = new Quote(data.author, data.quote)
+    })
   }
 
 }
