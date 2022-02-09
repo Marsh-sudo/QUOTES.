@@ -8,49 +8,28 @@ import { Quotes } from '../quotes';
 })
 export class QuoteComponent implements OnInit {
 
-
-  wise:Quotes[] = [
-    new Quotes(1,'Success usually comes to those who are busy looking for it',
-    'Mahtmah Melly',
-    new Date(2021,3,15),0,0),
-    new Quotes(2,'I never dreamed about success.I worked for it','Estee Lauder',new Date (2009,6,10),0,0),
-    new Quotes(3,'Do not let yesterday take up too much of today','Will Rodgers',new Date(2010,4,6),0,0),
-    new Quotes(4,'Goal setting is the secret to a compelling future','Tony Robbins',new Date(2013,11,5),0,0),
-    new Quotes(5,'Either you run the day or the day runs you.','Thomas Jefferson',new Date (2006,7,10),0,0),
-    new Quotes(6,'Setting goals is the first step in turning the invisible to visible','Tony Mark',new Date(2004,1,11),0,0),
+  quotes:Quotes[]=[
+     new Quotes(1,'Success usually Comes to those who are busy looking for it','Mahtamah melly',new Date(2021,3,15),0,0),
+     new Quotes (2,'I never dreamed about success.I worked for it','Estee Launder',new Date (2009,3,14),0,0),
+     new Quotes (3,'Do not let yesterday take up too much of today','Will Rodgers',new Date(2012,3.4),0,0)
+  ]
     
-
-  ];
-
-     
-
-
-   quoteDelete(Delete: any, index: number){
-      if(Delete){
-        let toDelete = confirm(`Are You sure you want to Delete this Quote`)
-        if(toDelete){
-          this.wise.splice(index,1)
-        }
-      }
-
-   }
-
-    toggleDetails(index: any){
-      this.wise[index].showDescription = !this.wise[index].showDescription;
-    }
-
   addNewQuote(quote:any){
-    //alert("works");
-    let quoteLength = this.wise.length;
-    console.log(quoteLength);
+    let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;
-    console.log(quote.id);
-    quote.postDate = new Date (quote.postDate)
-    this.wise.push(quote)
-    console.log(quote);
+    quote.completeDate = new Date(quote.completeDate);
+    this.quotes.push(quote)
+
   }
 
-   
+  quoteDelete(Delete:any, index:number){
+    if(Delete) {
+      let toDelete: boolean = confirm(`Are you sure you want to delete this quote`)
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
+  }
 
 
 

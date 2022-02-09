@@ -1,55 +1,23 @@
+<h1>QUOTES APPLICATION.</h1>
 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div *ngFor="let quote of quotes;let i = index">
+                <div class="card-body">
+                    <p>{{quote.quotename}}</p>
+
+                </div>
+                <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.author}}</span><span id="date"><span id="datecolor">{{quote.postDate|date}}</span></span></span>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <div class="container">
-  <div class="section">
-    <h1>MOTIVATIONAL QUOTES.</h1><br>
-    <p>
-      <strong>EVERYONE IN LIFE NEEDS SOME MOTIVATIONAL INSPIRATION IN SOME WAY OR ANOTHER.SO WE HAVE COME 
-        COME UP WITH AN APP WHERE PEOPLE CAN PICK UP SOME QUOTES AND EVEN CREATE THIER OWN QUOTES.
-      </strong>
-    </p>
-    
-  </div>
+ <div class="col-md-12">
+     <app-form (addQuote)="addNewQuote($event)"></app-form>
+ </div>
 </div>
-
- <div class="container">
-   <div class="row">
-     <div class="col-md-6">
-       <h6>Some motivational quotes:</h6>
-       ijsiucnuf
-       
-       
-       <div *ngFor='let quote of wise;let i = index'>
-            
-            <div>
-              
-                <p>{{quote.quotename}}</p>
-
-            </div>
-
-              <p>Posted on:{{quote.postDate|date}}</p>
-               <button (click) = 'toggleDetails(i)'>Show Details</button>
-               <!-- <app-form (addQuote)="addNewQuote($event)"></app-form> -->
-               <app-quote-detail  [quote]="quote" (Delete) = 'quoteDelete($event,i)'></app-quote-detail>
-           </div>
-      
-      
-     </div>
-     <div class="col-md-6">
-      <app-form (addQuote)="addNewQuote($event)"></app-form>
-     </div>
-    </div>
-  </div>
-
-   <div class="container">
-     <div class="row">
-       <!-- <div class="col-sm-12">
-        <app-form (addQuote)="addNewQuote($event)"></app-form>
-       </div> -->
-     </div>
-   </div>
-     
-   
- 
-
