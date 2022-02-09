@@ -1,3 +1,7 @@
+body{
+    background-color: burlywood;
+}
+
 *{
     font-family: 'Architects Daughter', cursive;
   }
@@ -11,13 +15,13 @@
   .card{
     margin-bottom: 2%;
     background-color: grey;
-    box-shadow: 2px 2px 3px 2px black;
+   
   }
   
   .card{
-    margin-bottom: 2%;
+    margin-bottom: 3%;
     background-color: aliceblue;
-    box-shadow: 2px 2px 3px 2px black;
+    
   }
   #date{
     float: right;
@@ -29,6 +33,6 @@
   }
   .card-text{
     font-family: 'Handlee', cursive;
-    font-weight: 570;
-    font-size: 30px;
+    font-weight: 670;
+    font-size: 40px;
   }
