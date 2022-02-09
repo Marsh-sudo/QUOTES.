@@ -10,13 +10,10 @@
   }
   .card{
     margin-bottom: 2%;
-    background-color: aliceblue;
+    background-color: grey;
     box-shadow: 2px 2px 3px 2px black;
   }
-  #user{
-    color:rgb(43, 214, 0);
-    font-weight: 700;
-  }
+  
   .card{
     margin-bottom: 2%;
     background-color: aliceblue;
@@ -24,14 +21,14 @@
   }
   #date{
     float: right;
-    font-size: 14px;
+    font-size: 20px;
   }
   #datecolor{
-    color: green;
+    color: royalblue;
     font-weight: 700;
   }
   .card-text{
     font-family: 'Handlee', cursive;
     font-weight: 570;
-    font-size: 18px;
+    font-size: 30px;
   }
